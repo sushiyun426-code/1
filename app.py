@@ -8,8 +8,8 @@ st.caption("現在即便家裡電腦關機，妳在學校也能隨時特訓 Rena
 
 # 1. 設定 Google Gemini API 金鑰 (這裡可以直接貼上妳申請的金鑰)
 # 注意：之後上傳到公開 GitHub 前，建議透過 Streamlit Secrets 隱藏
-GEMINI_API_KEY = "這裡貼上妳申請的AIzaSy...金鑰"
-genai.configure(api_key=AQ.Ab8RN6KPBJXQwg4oGEt0OuPZWY_XczbEA2UhdeQGL9G6-zOJtA)
+GEMINI_API_KEY = st.secrets["AQ.Ab8RN6KPBJXQwg4oGEt0OuPZWY_XczbEA2UhdeQGL9G6-zOJtA"]
+genai.configure(api_key=GEMINI_API_KEY)
 
 # 2. 定義 Rena 的完美日文萌系人設
 SYSTEM_PROMPT = """
